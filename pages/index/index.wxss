@@ -1,0 +1,130 @@
+/**index.wxss**/
+@import "/pages/good-house/good-house-template.wxss";
+.search-content {
+  height: 52rpx;
+  line-height: 52rpx;
+  background-color: #e7e7e7;
+  margin: 10px 20px;
+  padding: 10rpx;
+  border-radius: 5px;
+  color: #333;
+}
+
+.search-img {
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+  vertical-align: middle;
+}
+
+.search-key {
+  font-size: 24rpx;
+  vertical-align: middle;
+}
+
+.panel {
+  /*overflow: hidden;*/
+  background-color: white;
+  border-top: solid 1px #c9c9c9;
+  padding: 10rpx;
+  padding-top: 0px;
+}
+
+.part1 {
+  padding-top: 22rpx;
+}
+
+.describe1, .describe2 {
+  display: block;
+  margin: 6px 20px;
+  font-size: 22rpx;
+  line-height: 18px;
+  color: inherit;
+}
+
+.container-sub {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  height: 246px;
+  margin:6px 20px;
+
+}
+
+.play-container {
+  width: 100%;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  /* background: #000; */
+  cursor: pointer;
+}
+
+.play-container video {
+  display:block;
+  width:648rpx;
+  height:234px;
+
+}
+.part2-sub-container{
+  /*width: 750rpx;*/
+  margin:6px 20px;
+  display: flex;
+  flex-direction: row;
+}
+.flex-item{
+  display: flex;
+  flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border: solid 1px #e7e7e7;
+    /*border-bottom: 0px;*/
+    flex-grow:1;
+
+}
+.part2-sub image{
+  width:100%;
+}
+
+.part2-sub-text{
+  height: 96rpx;
+  vertical-align: middle;
+}
+
+.part2-sub-item1{
+  margin-right: 5px;
+}
+
+.part2-sub-item2{
+  margin-left: 5px;
+}
+
+.part2-sub-text text{
+  /*height:48rpx;*/
+  line-height: 48rpx;
+  display: block;
+  font-size:24rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.part3 .describe1{
+  float: left;
+}
+
+.part3 .describe2{
+  float: right;
+}
+
+.part4{
+  margin:6px 20px;
+}
+.part5{
+  margin:6px 20px;
+}
+.line{
+  width: 150px;
+  height: 1rpx;
+  border-top:solid #c9c9c9 1px;
+}

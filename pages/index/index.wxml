@@ -1,0 +1,62 @@
+
+<!--index.wxml-->
+<import src="/pages/good-house/good-house-template.wxml"/>
+<view class="container">
+  <view bindtap="bindViewTap" class="search-content">
+    <image class="search-img" src="../../image/search.png"></image>
+    <text class="search-key">任何房源·任何时间·1位</text>
+  </view>
+  <view class="panel">
+
+    <view class="part1">
+      <text class="describe1">Travel like a local，We are locals！</text>
+      <text class="describe2">与当地人交朋友，像当地人一样旅行</text>
+    </view>
+    <view class="container-sub">
+      <view class="play-container">
+        <video src="http://www.localhome.cn/UploadFiles/e.mov" poster="http://cloudupweb.oicp.net/UploadFiles/HomePage/video.png" objectFit="fill" controls></video>
+      </view>
+    </view>
+
+    <view class="part2">
+      <text class="describe1">Wonderful functions | 精彩活动</text>
+      <view class="part2-sub-container">
+        <view class="part2-sub part2-sub-item1 flex-item ">
+          <image src="http://cloudupweb.oicp.net/UploadFiles/HomePage/01.png"></image>
+          <view class="part2-sub-text">
+            <text>尊享邀请好友</text>
+            <text>送TA300元，自得100元</text>
+          </view>
+        </view>
+        <view class="part2-sub part2-sub-item2 flex-item">
+          <image src="http://cloudupweb.oicp.net/UploadFiles/HomePage/02.png"></image>
+          <view class="part2-sub-text">
+            <text>我要成为房东</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="part3">
+      <text class="describe1">精彩房源</text>
+      <text class="describe2">more ></text>
+    </view>
+
+    <view class="part4">
+      <block wx:for="{{goodHouseList}}" wx:for-item="item" wx:for-index="idx">
+        <view catchtap="onGoToBookTap" data-house-id="{{item.houseId}}">
+          <template is="goodHouse" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
+
+    <view class="part5">
+      <view class="line"></view>
+    </view>
+
+    <view class="part6">
+      <text class="describe1">旅游目的地精选</text>
+    </view>
+
+  </view>
+</view>

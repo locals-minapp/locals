@@ -1,0 +1,11 @@
+<template name="goodHouse">
+  <view class="good-house-content">
+    <image class="house-img" src="{{houseImg}}"></image>
+    <view class="describe">
+      <text class="house-owner">房东</text>
+      <text class="house-owner-name">{{houseOwner}} · </text>
+      <text class="house-owner-title">{{houseOwnerTitle}}</text>
+      <text class="slogan">{{slogan}}</text>
+    </view>
+  </view>
+</template>
