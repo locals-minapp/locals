@@ -16,15 +16,18 @@
     line-height: 20rpx;
     text-align: center;
     margin-right: 10px;
+    font-size: 24rpx;
 }
 .house-owner-name{
     height: 20rpx;
     line-height: 20rpx;
+    font-size: 22rpx;
 }
 .house-owner-title{
     height: 20px;
     line-height: 20px;
     color: #333;
+    font-size: 22rpx;
 }
 .slogan{
     display: block;

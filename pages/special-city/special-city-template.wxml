@@ -1,0 +1,11 @@
+<template name="specialCity">
+  <view class="special-city-content">
+    <image class="city-img" src="{{cityImage}}"></image>
+    <view class="describe">
+      <image class="tag" src="../../image/ico-tj.png"></image>
+      <text class="recommend">推荐</text>
+      <text class="city-name">{{city}} · </text>
+      <text class="city-slogan">{{citySlogan}}</text>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,46 @@
+.city-img {
+  width: 100%;
+  height: 200px;
+}
+
+.describe {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.tag {
+  width: 75rpx;
+  height: 36rpx;
+}
+
+.recommend {
+  /*float: left;*//*background: url(../../image/ico-tj.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;*/
+  width: 75rpx;
+  height: 36rpx;
+  color: white;
+  font-size: 24rpx;
+  margin-left: -67rpx;
+  bottom: 10rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+
+.city-name {
+    margin-left: 20rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
+}
+
+.city-slogan {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  color: #333;
+  font-size: 22rpx;
+  margin-bottom: 15px;
+}

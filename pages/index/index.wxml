@@ -1,6 +1,7 @@
 
 <!--index.wxml-->
 <import src="/pages/good-house/good-house-template.wxml"/>
+<import src="/pages/special-city/special-city-template.wxml"/>
 <view class="container">
   <view bindtap="bindViewTap" class="search-content">
     <image class="search-img" src="../../image/search.png"></image>
@@ -39,7 +40,7 @@
 
     <view class="part3">
       <text class="describe1">精彩房源</text>
-      <text class="describe2">more ></text>
+      <text class="describe2" catchtap="onMoreTap">more ></text>
     </view>
 
     <view class="part4">
@@ -57,6 +58,12 @@
     <view class="part6">
       <text class="describe1">旅游目的地精选</text>
     </view>
-
+    <view class="part7">
+      <block wx:for="{{specialCityList}}" wx:for-item="item" wx:for-index="idx">
+        <view catchtap="onGoToTargetTap" data-house-id="{{item.city}}">
+          <template is="specialCity" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
   </view>
 </view>

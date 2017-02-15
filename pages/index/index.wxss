@@ -1,5 +1,6 @@
 /**index.wxss**/
 @import "/pages/good-house/good-house-template.wxss";
+@import "/pages/special-city/special-city-template.wxss";
 .search-content {
   height: 52rpx;
   line-height: 52rpx;
@@ -127,4 +128,7 @@
   width: 150px;
   height: 1rpx;
   border-top:solid #c9c9c9 1px;
+}
+.part7{
+  margin:6px 20px;
 }

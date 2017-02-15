@@ -1,0 +1,100 @@
+.house-img {
+  width: 100%;
+  height: 254px;
+}
+
+.price {
+  display: inline-block;
+  font-size: 24rpx;
+  color: white;
+  margin-top: -32px;
+  position: relative;
+  background-color: black;
+  opacity: 0.7;
+  top: -120rpx;
+  left: 0;
+  padding: 15rpx;
+}
+
+.house-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10rpx 5rpx;
+}
+
+.house-info-content {
+  flex-grow: 1;
+  width: 60%;
+  margin-top:-40rpx;
+
+}
+
+.house-owner-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-img, .bedroom-img, .bed-img, .bathroom-img {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.guest, .bedroom, .bed, .bathroom {
+  flex-direction: row;
+  display: inline-block;
+  font-size: 21rpx;
+  color: #7a7a7a;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.house-describe{
+    font-size: 24rpx;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 2px;
+    color: #252525;
+}
+
+.house-specification, .house-city {
+  font-size: 21rpx;
+  color: #7a7a7a;
+  vertical-align: middle;
+}
+
+.house-owner-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50px;
+  border: solid white 2px;
+  vertical-align: middle;
+  align-content: center;
+  margin-top:-110rpx;
+
+}
+
+.house-owner-name {
+  height: 17px;
+  text-align: center;
+  line-height: 17px;
+  color: #7a7a7a;
+  font-size: 21rpx;
+}
+
+.house-owner-title {
+  margin-top: 10rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  /*float: right;*/
+  border-radius: 5px;
+  border: solid white 0px;
+  background-color: #f8b62b;
+  color: white;
+  font-size: 21rpx;
+  height: 19px;
+  text-align: center;
+  line-height: 19px;
+}

@@ -1,0 +1,41 @@
+<template name="houseList">
+  <view class="house-list-content">
+    <image class="house-img" src="{{houseImg}}"></image>
+    <view class="price">
+        <text>￥{{price}}</text>
+    </view>
+    <view class="house-content">
+      <view class="house-info-content">
+        
+        <text class="house-describe">{{houseDescribe}}</text>
+        <view>
+          <text class="house-specification">{{houseSpecification}}</text>
+          <text class="house-city">{{houseCity}}</text>
+        </view>
+        
+        <view class="guest">
+          <image class="guest-img" src="/image/people.png"></image>
+          <text class="guest-text">{{guest}}位房客</text>
+        </view>
+        <view class="bedroom">
+          <image class="bedroom-img" src="/image/room.png"></image>
+          <text class="bedroom-text">{{bedroom}}间卧室</text>
+        </view>
+        <view class="bed">
+          <image class="bed-img" src="/image/bed.png"></image>
+          <text class="guest-text">{{bed}}张床</text>
+        </view>
+        <view class="bathroom">
+          <image class="bathroom-img" src="/image/bathroom.png"></image>
+          <text class="bathroom-text">{{bathroom}}卫</text>
+        </view>
+      </view>
+
+      <view class="house-owner-content">
+        <image class="house-owner-img" src="{{houseOwnerImg}}"></image>
+        <text class="house-owner-name">{{houseOwnerName}}</text>
+        <text class="house-owner-title">{{houseOwnerTitle}}</text>
+      </view>
+    </view>
+  </view>
+</template>

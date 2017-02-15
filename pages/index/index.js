@@ -23,9 +23,18 @@ Page({
         userInfo:userInfo
       })
     })
-    console.log(houseData.goodHouseList);
+    console.log(houseData.specialCityList);
     this.setData({
-      goodHouseList:houseData.goodHouseList
+      goodHouseList:houseData.goodHouseList,
+      specialCityList:houseData.specialCityList
+    })
+  },
+  onMoreTap:function(event){
+    var dataset = event.currentTarget.dataset;
+    console.log(dataset);
+    wx.navigateTo({
+      url: '../house/houseList'
+     
     })
   }
 })
