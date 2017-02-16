@@ -1,7 +1,11 @@
 {
   "pages":[
+    "pages/house/house-gallery/house-gallery",
     "pages/index/index",
-    "pages/house/houseList",
+    "pages/date-picker/dateSelect",
+    
+    "pages/house/house-list",
+    
     "pages/logs/logs"
   ],
   "window":{

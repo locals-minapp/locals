@@ -29,8 +29,16 @@
   position: relative;
 }
 
+.city {
+  display: inline-block;
+  height: 36rpx;
+  line-height: 36rpx;
+  bottom: 4px;
+  position: relative;
+}
+
 .city-name {
-    margin-left: 20rpx;
+  margin-left: 20rpx;
   height: 36rpx;
   line-height: 36rpx;
   font-size: 24rpx;

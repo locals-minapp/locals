@@ -36,5 +36,12 @@ Page({
       url: '../house/houseList'
      
     })
+  },
+  onHouseTap:function(event){
+    var houseId = event.currentTarget.dataset.houseId;
+    console.log(houseId);
+    wx.navigateTo({
+      url:"../house/house-gallery/house-gallery?houseId="+houseId
+    })
   }
 })

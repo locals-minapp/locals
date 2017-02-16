@@ -1,5 +1,5 @@
 <template name="goodHouse">
-  <view class="good-house-content">
+  <view class="good-house-content" catchtap="onHouseTap" data-house-id="{{houseId}}">
     <image class="house-img" src="{{houseImg}}"></image>
     <view class="describe">
       <text class="house-owner">房东</text>

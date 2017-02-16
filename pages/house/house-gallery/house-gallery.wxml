@@ -1,0 +1,59 @@
+
+<!--pages/house/house-gallery/house-gallery.wxml-->
+<view class="house-gallery-container">
+  <swiper vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}" interval="10000" >
+    <block wx:for="{{houseGallery.houseGallery}}" wx:for-item="item" wx:for-index="idx">
+      <swiper-item>
+      <view class="house-gallery-item">
+      <image src="{{item.houseImg}}" mode="aspectFit"></image>
+        <view class="descript-index" wx:if="{{item.isIndex}}">
+          <text class="infoTitle">{{item.infoTitle}}</text>
+          <view class="line"></view>
+          <text class="price">{{item.city}}/{{item.price}}元</text>
+          <text class="des">{{item.descript}}</text>
+          <view class="page-index">
+            <text>{{idx+1}}/{{houseGallerySize}}</text>
+          </view>
+        </view>
+        <view class="descript-index" wx:else>
+          <view class="des">{{item.descript}}</view>
+          <view class="page-index">
+            <text>{{idx+1}}/{{houseGallerySize}}</text>
+          </view>
+          <view class="more-descript">
+            <image src="../../../image/ico-more.png"></image>
+          </view>
+        </view>
+        
+      </view>
+        
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--<view class="test" >
+    <image src="http://cloudupweb.oicp.net/UploadFiles/HouseSource/22/22_160817153146_709db845531d4a1e85858aaa26686d96.jpeg"></image>
+  </view>-->
+  <view class="memberInfo">
+   <image class="houseOwnerImg" src="{{houseGallery.houseOwner.houseOwnerImg}}"></image>
+    <view class="houseOwner">
+       
+    <text class="houseOwnerName">{{houseGallery.houseOwner.houseOwnerName}}</text>
+    <text class="contactHouseOwner">联系房东预订</text>
+    </view>
+    
+    <view class="other">
+      <view class="comment">
+        <image class="comment-img" src="/image/ico-heart.png"></image>
+        <text class="comment-text">{{houseGallery.houseOwner.comment}}</text>
+      </view>
+      <view class="location">
+        <image class="location-img" src="/image/ico-location.png"></image>
+        <text class="location-text">位置</text>
+      </view>
+      <view class="calendar">
+        <image class="calendar-img" src="/image/ico-calendar.png"></image>
+        <text class="calendar-text">日历</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -70,11 +70,7 @@ var special_city_list = [
         citySlogan: "岁月流年，静述着百年的沧桑巨变",
         cityImage: "http://wxpt.localhome.cn/UploadFiles/HomePage/shanghai20170112.jpg"
     },
-    {
-        city: "拉萨",
-        citySlogan: "古城的中心，凛然不可侵犯之神韵",
-        cityImage: "http://wxpt.localhome.cn/UploadFiles/HomePage/lasa20170112.jp"
-    },
+    
     {
         city: "南京",
         citySlogan: "自古帝王州，郁郁葱葱佳气浮",
@@ -148,9 +144,42 @@ var house_list = [
         houseOwnerName:"test30",
         houseOwnerTitle:"室内设计师1"
     }
-]
+];
+var house_gallery={
+    houseGallery:[
+        {houseImg:"http://cloudupweb.oicp.net/UploadFiles/HouseSource/22/22_160812123225_ca9ea8f504c046688a71509ea01699f2.jpeg",
+        isIndex:true,
+        infoTitle:"广州最美历史民宿",
+        city:"广州",
+        price:359,
+        descript:"沙面是中国最富有欧陆风情的地方，是广州市中心国家5A级景区！"
+        },
+        {
+           houseImg:"http://cloudupweb.oicp.net/UploadFiles/HouseSource/22/22_160817153146_709db845531d4a1e85858aaa26686d96.jpeg",
+        isIndex:false, 
+        descript:"西关人家"
+        },
+        {
+           houseImg:"http://cloudupweb.oicp.net/UploadFiles/HouseSource/22/22_160817153155_4fc5cb3365f64415b07b2363e1413aee.jpeg",
+        isIndex:false, 
+        descript:"西关人家"
+        },
+        {
+            houseImg:"http://cloudupweb.oicp.net/UploadFiles/HouseSource/2/2_151225114703_410b02b89dc8478aaf90d4bd2bcd91a2.jpg",
+            isIndex:false,
+            descript:"423楼高层精装两房公寓,开放厨房浪漫迷你吧,阳台美景,阳光充沛!位于CBD核心广州天河珠江珠城Guangzhou Tianhe Zhujiang NEW Town CBD核心高尚住宅社区,可俯瞰珠江Pearl River,广州塔小蛮腰Guangzhou Tower和猎德大桥等城市标志!楼下为广州最为热闹和繁华的兴盛路(Xingsheng Road)风情酒吧街(Bar Steet),美食美酒,帅哥和美女!步行可达珠江河畔(Zhujiang River)海心沙和花城广场,交通极为便利,地铁四通八达!"
+        }
+
+    ],
+    houseOwner:{
+        houseOwnerImg: "http://cloudupweb.oicp.net/UploadFiles/HomePage/07.png",
+        houseOwnerName: "Jim",
+        comment:0
+    }
+}
 module.exports = {
     goodHouseList: good_house_list,
     specialCityList: special_city_list,
-    houseList:house_list
+    houseList:house_list,
+    houseGallery:house_gallery
 }
