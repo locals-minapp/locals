@@ -2,7 +2,7 @@
 <!--index.wxml-->
 <import src="/pages/good-house/good-house-template.wxml"/>
 <import src="/pages/special-city/special-city-template.wxml"/>
-<view class="container">
+<view>
   <view bindtap="bindViewTap" class="search-content">
     <image class="search-img" src="../../image/search.png"></image>
     <text class="search-key">任何房源·任何时间·1位</text>

@@ -15,7 +15,6 @@
   display: inline-block;
   width: 35rpx;
   height: 35rpx;
-  padding: 15rpx 15rpx 15rpx 20rpx;
   vertical-align: middle;
 }
 
@@ -26,9 +25,9 @@
 
 .panel {
   /*overflow: hidden;*/
+  width:100%;
   background-color: white;
   border-top: solid 1px #c9c9c9;
-  padding: 10rpx;
   padding-top: 0px;
 }
 
@@ -49,22 +48,20 @@
   padding-right: 0px;
   padding-left: 0px;
   height: 246px;
-  margin:6px 20px;
-
 }
 
 .play-container {
-  width: 100%;
   position: relative;
   height: auto;
   overflow: hidden;
   /* background: #000; */
   cursor: pointer;
+  padding: 0 40rpx;
 }
 
 .play-container video {
   display:block;
-  width:648rpx;
+  width:100%;
   height:234px;
 
 }

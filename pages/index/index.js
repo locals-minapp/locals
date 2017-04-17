@@ -33,7 +33,7 @@ Page({
     var dataset = event.currentTarget.dataset;
     console.log(dataset);
     wx.navigateTo({
-      url: '../house/houseList'
+      url: '../house/house-list'
      
     })
   },

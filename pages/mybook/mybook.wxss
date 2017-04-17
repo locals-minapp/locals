@@ -1,0 +1,22 @@
+.flex-tab {
+    color: #e0e0e0;
+    border-bottom: solid 1px #e0e0e0;
+}
+.toptab.active {
+    color: #e84b60;
+    border-bottom: solid 2px #e84b60;
+}
+.container {
+    height:1500rpx;
+}
+.withtab {
+    margin-top: 65rpx;
+}
+#ctnt0,#ctnt1 {
+}
+#ctnt0{
+    background: red;
+}
+#ctnt1{
+    background: yellow;
+}

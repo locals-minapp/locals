@@ -1,0 +1,54 @@
+.user {
+    width: 100%;
+    background: #ffffff;
+    margin:15rpx 0;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user .userinfo-avatar{
+    flex: 1;
+    display: inline-block;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 140rpx;
+}
+.user .user-info{
+    flex: 5;
+    text-align: center;
+}
+.user .user-info text{
+    display: block;
+}
+.user .user-info .userinfo-nickname{
+    padding: 8rpx 0 10rpx 0;
+    font-size: 30rpx;
+
+}
+.my{
+    margin:30px;
+    border-top:solid 1px #ebebeb;
+    border-bottom:solid 1px #ebebeb;
+    width:80%;
+}
+.my .my-item{
+    width: 100%;
+    background: #ffffff;
+    padding:0;
+}
+.my .my-item .myitem-name{
+    flex: 5;
+    text-align: left;
+    font-size: 34rpx;
+    line-height: 60rpx;
+    padding: 30rpx 0;
+    border-bottom: solid 1px #ebebeb;
+}
+.my .my-item:last-child .myitem-name{
+    border-bottom: none;
+}
+.arrow-right{
+    float: right;
+}
+

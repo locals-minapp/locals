@@ -1,11 +1,11 @@
 {
   "pages":[
-    "pages/house/house-gallery/house-gallery",
-    "pages/index/index",
+    "pages/index/index",                                     "pages/house/house-gallery/house-gallery",
     "pages/date-picker/dateSelect",
-    
     "pages/house/house-list",
-    
+    "pages/message/message",
+    "pages/mybook/mybook",
+    "pages/info/info",
     "pages/logs/logs"
   ],
   "window":{
@@ -13,5 +13,36 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "position":"bottom",
+    "selectedColor":"#c21346",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/tab/ico-menu1n_.png",
+        "selectedIconPath": "image/tab/ico-menu1n_red_.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "image/tab/ico-menu2n_.png",
+        "selectedIconPath": "image/tab/ico-menu2_red_.png"
+      },
+      {
+        "pagePath": "pages/mybook/mybook",
+        "text": "行程",
+        "iconPath": "image/tab/ico-menu3n_.png",
+        "selectedIconPath": "image/tab/ico-menu3n_red_.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "我的",
+        "iconPath": "image/tab/ico-menu4n_.png",
+        "selectedIconPath": "image/tab/ico-menu4n_red_.png"
+      }
+    ]
   }
 }
