@@ -4,13 +4,18 @@ var houseData=require('../../data/house-data.js')
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    searchMoreShow:false,
     userInfo: {}
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  bindSearchMoreTap: function() {
+    this.setData({
+      searchMoreShow:true
+    })
+  },
+  bindHindSearchMoreTap:function() {
+    this.setData({
+      searchMoreShow:false
     })
   },
   onLoad: function () {

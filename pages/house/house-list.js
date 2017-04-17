@@ -24,8 +24,8 @@ Page({
   },
   onScrollLower:function(event){
     console.log("onScrollLower");
-    this.processHouseListData(houseData.houseList);
     wx.showNavigationBarLoading();
+    this.processHouseListData(houseData.houseList);
   },
   processHouseListData:function(houseList){
     var totalHouseList = {};
@@ -40,7 +40,8 @@ Page({
     this.setData({
         houseList:totalHouseList
     })
-   wx.hideNavigationBarLoading();
+    console.log('call  wx.hideNavigationBarLoading')
+    wx.hideNavigationBarLoading()
     wx.stopPullDownRefresh()
   }
 })
