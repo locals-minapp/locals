@@ -31,15 +31,31 @@ input{
 }
 .date-day{
     display: flex;
+    flex-direction: column;
     margin:5px;
     text-align:center;
     justify-content: center;
     align-items: center;
 }
 .date-day.active{
-    background: #FF9C01;
+    background: #ff4a4d;
     color:#FFF;
     border-radius: 100%;
+}
+.date-day.start-date::after{
+    content: "入住";
+    display: block;
+    font-size: 10px;
+    color: #fff;
+}
+.date-day.end-date::after{
+    content: "离开";
+    display: block;
+    font-size: 10px;
+    color: #fff;
+}
+.date-day.through-date {
+    background: #aaa
 }
 .date-day.unavailable{
     color:#aaa;

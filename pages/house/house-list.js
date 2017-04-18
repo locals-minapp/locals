@@ -1,9 +1,13 @@
 // pages/house/houseList.js
 var houseData=require('../../data/house-data.js')
-
+var app = getApp()
 Page({
   data:{
-    searchMoreShow:false
+    searchMoreShow:false,
+    searchKeyword:'',
+    searchStartDate:'',
+    searchEndDate:'',
+    searchPeopleCount:app.globalData.searchPeopleCount,
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -17,6 +21,22 @@ Page({
   },
   onShow:function(){
     // 页面显示
+    var that = this
+     if (app.globalData.searchKeyword != '') {
+      that.setData({
+        searchKeyword:app.globalData.searchKeyword
+      })
+    }
+    if (app.globalData.searchStartDate != '') {
+      that.setData({
+        searchStartDate:app.globalData.searchStartDate
+      })
+    }
+    if (app.globalData.searchEndDate != '') {
+      that.setData({
+        searchEndDate:app.globalData.searchEndDate
+      })
+    }
   },
   onHide:function(){
     // 页面隐藏
@@ -29,9 +49,21 @@ Page({
       searchMoreShow:true
     })
   },
-  bindHindSearchMoreTap:function() {
+  bindHindSearchMoreTap: function() {
     this.setData({
       searchMoreShow:false
+    })
+  },
+  bindCitySelectTap: function(e) {
+    wx.navigateTo({
+      url: '../citySelect/city-select'
+     
+    })
+  },
+  bindDateSelectTap: function(e) {
+    wx.navigateTo({
+      url: '../datePicker/dateSelect'
+     
     })
   },
   onScrollLower:function(event){

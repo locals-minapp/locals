@@ -5,7 +5,7 @@
 <view>
   <view bindtap="bindSearchMoreTap" class="search-content" wx:if="{{!searchMoreShow}}">
     <image class="search-img" src="../../image/ico-search-white-gray.png"></image>
-    <text class="search-key">任何房源·任何时间·1位</text>
+    <text class="search-key">{{searchKeyword == '' ? '任何房源' : searchKeyword}}·{{(searchStartDate != '' && searchEndDate != '') ? searchStartDate + '至' + searchEndDate : '任何时间'}}·1位</text>
   </view>
   <view class="search-more-content" wx:if="{{searchMoreShow}}">
     <view class="search-top-menu">
@@ -24,7 +24,7 @@
     </view>
     <view bindtap="bindDateSelectTap" class="search-content">
       <image class="search-img" src="../../image/ico-searchcal-gray.png"></image>
-      <text class="search-key">任何时间</text>
+      <text class="search-key">{{(searchStartDate != '' && searchEndDate != '') ? searchStartDate + '至' + searchEndDate : '任何时间'}}</text>
     </view>
     <view bindtap="bindViewTap" class="search-content">
       <image class="search-img" src="../../image/ico-searchpeo-gray.png"></image>

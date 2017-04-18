@@ -1,7 +1,7 @@
 // pages/dateSelect/dateSelect.js
 
 var Moment = require("../../utils/Moment.js");
-
+var app = getApp()
 var DATE_LIST = [];
 var DATE_YEAR = new Date().getFullYear()
 var DATE_MONTH = new Date().getMonth()+1
@@ -153,9 +153,11 @@ Page({
           checkOutDate:this.data.checkOutDate
         }
       });
-      // wx.navigateBack({
-      //   delta: 1, // 回退前 delta(默认为1) 页面
-      // });
+      app.globalData.searchStartDate = this.data.checkInDate
+      app.globalData.searchEndDate = this.data.checkOutDate
+      wx.navigateBack({
+        delta: 1, // 回退前 delta(默认为1) 页面
+      });
     }
     
     this.renderPressStyle(year,month,day);
@@ -163,24 +165,69 @@ Page({
   renderPressStyle:function(year,month,day){
       var dateList = this.data.dateList;
       //渲染点击样式
+      var checkInDate = this.data.checkInDate
+      var checkOutDate = this.data.checkOutDate
+      console.log(checkInDate)
+      console.log(checkOutDate)
       for(var i=0;i<dateList.length;i++){
         var dateItem = dateList[i];
         var id = dateItem.id;
-        if(id === year+'-'+month){
+        // if(id === year+'-'+month){
+        //   var days = dateItem.days;
+        //   console.log(days);
+        //   for(var j=0;j<days.length;j++){
+        //     var tempDay = days[j].day;
+        //     if(tempDay == day){
+        //       days[j].class = days[j].class+' active';
+        //       break;
+        //     }
+        //   }
+        //   break;
+        // }
+        if (this.data.markcheckInDate &&!this.data.markcheckOutDate) {
+          if(id === year+'-'+month){
+            var days = dateItem.days;
+            console.log(days);
+            for(var j=0;j<days.length;j++){
+              var tempDay = days[j].day;
+              if(tempDay == day){
+                days[j].class = days[j].class+' active start-date';
+                break;
+              }
+            }
+            break;
+          }
+        } else if (this.data.markcheckInDate &&this.data.markcheckOutDate) {
           var days = dateItem.days;
           console.log(days);
           for(var j=0;j<days.length;j++){
-            var tempDay = days[j].day;
-            if(tempDay == day){
-              days[j].class = days[j].class+' active';
-              break;
+            if (days[j].day > 0) {
+              var tempMonth = dateItem.month;
+              var tempDay = days[j].day;
+              if(tempMonth<10) tempMonth='0'+tempMonth
+              if(tempDay <10) tempDay= '0'+tempDay
+              var date = dateItem.year+'-'+tempMonth+'-'+tempDay;
+              var tempDate = id + '-' + days[j].day;
+              console.log(date)
+              
+              console.log(checkInDate < date)
+              console.log(checkOutDate > date)
+              if (checkInDate < date && date < checkOutDate) {
+                days[j].class = days[j].class+' through-date';
+              }
+              if(tempDate == year + '-' + month + '-' + day){
+                days[j].class = days[j].class+' active end-date';
+                break;
+              }
             }
+            
           }
-          break;
         }
       }
+      console.log(new Date())
       this.setData({
           dateList:dateList
       });
+      console.log(new Date())
   }
 })

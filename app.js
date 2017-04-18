@@ -29,7 +29,7 @@ App({
     userInfo:null,
     searchKeyword:'',
     searchStartDate:'',
-    searchEndData:'',
+    searchEndDate:'',
     searchPeopleCount:1
   }
 })
