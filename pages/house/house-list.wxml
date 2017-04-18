@@ -1,4 +1,29 @@
 <import src="../house-list/house-list-template.wxml"/>
+<view bindtap="bindSearchMoreTap" class="search-content" wx:if="{{!searchMoreShow}}">
+    <image class="search-img" src="../../image/ico-search-white-gray.png"></image>
+    <text class="search-key">任何房源·任何时间·1位</text>
+  </view>
+  <view class="search-more-content" wx:if="{{searchMoreShow}}">
+    <view class="search-top-menu">
+      <image class="search-img" bindtap="bindHindSearchMoreTap" src="../../image/ico-searchup-gray.png"></image>
+      <view bindtap="bindCleanSearchTap" class="clean-search">
+        <image class="search-img" src="../../image/clean_all.png"></image>
+        <text>清除全部</text>
+      </view>
+    </view>
+    <view bindtap="bindViewTap" class="search-content">
+      <image class="search-img" src="../../image/ico-searchcity-gray.png"></image>
+      <text class="search-key">任何房源</text>
+    </view>
+    <view bindtap="bindViewTap" class="search-content">
+      <image class="search-img" src="../../image/ico-searchcal-gray.png"></image>
+      <text class="search-key">任何时间</text>
+    </view>
+    <view bindtap="bindViewTap" class="search-content">
+      <image class="search-img" src="../../image/ico-searchpeo-gray.png"></image>
+      <text class="search-key">1位</text>
+    </view>
+  </view>
 <scroll-view class="house-list-container" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
     <block wx:for="{{houseList}}" wx:for-item="house">
         <view class="single-view-container">

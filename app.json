@@ -1,8 +1,10 @@
 {
   "pages":[
-    "pages/index/index",                                     "pages/house/house-gallery/house-gallery",
-    "pages/date-picker/dateSelect",
-    "pages/house/house-list",
+    
+    "pages/index/index",                                    "pages/house/house-list",
+    "pages/house/house-gallery/house-gallery",
+    "pages/datePicker/dateSelect",
+    "pages/citySelect/city-select",
     "pages/message/message",
     "pages/mybook/mybook",
     "pages/info/info",

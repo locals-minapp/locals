@@ -1,7 +1,7 @@
 
 <!--index.wxml-->
-<import src="/pages/good-house/good-house-template.wxml"/>
-<import src="/pages/special-city/special-city-template.wxml"/>
+<import src="/pages/good-house/good-house-template.wxml" />
+<import src="/pages/special-city/special-city-template.wxml" />
 <view>
   <view bindtap="bindSearchMoreTap" class="search-content" wx:if="{{!searchMoreShow}}">
     <image class="search-img" src="../../image/ico-search-white-gray.png"></image>
@@ -9,17 +9,20 @@
   </view>
   <view class="search-more-content" wx:if="{{searchMoreShow}}">
     <view class="search-top-menu">
-      <image class="search-img"  bindtap="bindHindSearchMoreTap" src="../../image/ico-searchup-gray.png"></image>
+      <view class="hind-search-more-wrap" bindtap="bindHindSearchMoreTap">
+        <image class="search-img" src="../../image/ico-searchup-gray.png"></image>
+      </view>
+      
       <view bindtap="bindCleanSearchTap" class="clean-search">
         <image class="search-img" src="../../image/clean_all.png"></image>
         <text>清除全部</text>
       </view>
     </view>
-    <view bindtap="bindViewTap" class="search-content">
+    <view bindtap="bindCitySelectTap" class="search-content">
       <image class="search-img" src="../../image/ico-searchcity-gray.png"></image>
-      <text class="search-key">任何房源</text>
+      <text class="search-key">{{searchKeyword == '' ? '任何房源' : searchKeyword}}</text>
     </view>
-    <view bindtap="bindViewTap" class="search-content">
+    <view bindtap="bindDateSelectTap" class="search-content">
       <image class="search-img" src="../../image/ico-searchcal-gray.png"></image>
       <text class="search-key">任何时间</text>
     </view>
@@ -29,7 +32,6 @@
     </view>
   </view>
   <view class="panel">
-
     <view class="part1">
       <text class="describe1">Travel like a local，We are locals！</text>
       <text class="describe2">与当地人交朋友，像当地人一样旅行</text>
@@ -39,7 +41,6 @@
         <video src="http://www.localhome.cn/UploadFiles/e.mov" poster="http://cloudupweb.oicp.net/UploadFiles/HomePage/video.png" objectFit="fill" controls></video>
       </view>
     </view>
-
     <view class="part2">
       <text class="describe1">Wonderful functions | 精彩活动</text>
       <view class="part2-sub-container">
@@ -58,31 +59,27 @@
         </view>
       </view>
     </view>
-
     <view class="part3">
       <text class="describe1">精彩房源</text>
       <text class="describe2" catchtap="onMoreTap">more ></text>
     </view>
-
     <view class="part4">
       <block wx:for="{{goodHouseList}}" wx:for-item="item" wx:for-index="idx">
         <view catchtap="onGoToBookTap" data-house-id="{{item.houseId}}">
-          <template is="goodHouse" data="{{...item}}"/>
+          <template is="goodHouse" data="{{...item}}" />
         </view>
       </block>
     </view>
-
     <view class="part5">
       <view class="line"></view>
     </view>
-
     <view class="part6">
       <text class="describe1">旅游目的地精选</text>
     </view>
     <view class="part7">
       <block wx:for="{{specialCityList}}" wx:for-item="item" wx:for-index="idx">
         <view catchtap="onGoToTargetTap" data-house-id="{{item.city}}">
-          <template is="specialCity" data="{{...item}}"/>
+          <template is="specialCity" data="{{...item}}" />
         </view>
       </block>
     </view>

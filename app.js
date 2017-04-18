@@ -25,6 +25,11 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    a:'abcdefg',
+    userInfo:null,
+    searchKeyword:'',
+    searchStartDate:'',
+    searchEndData:'',
+    searchPeopleCount:1
   }
 })

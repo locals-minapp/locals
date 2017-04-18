@@ -1,0 +1,37 @@
+.keyword-input {
+    width: 100%;
+    border-bottom: 1px solid #EAEAEA;
+}
+.keyword-input input {
+    outline: none;
+    display: inline-block;
+    width: 80%;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: red;
+    padding: 16rpx;
+}
+.keyword-input text {
+    display: block;
+    float: right;
+    height:92rpx;
+    line-height:92rpx;
+    margin-right: 10rpx;
+}
+.all-city-title {
+    display: block;
+    width: 100%;
+    margin: 40rpx auto;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: lighter;
+}
+a.city {
+    font-size: 24rpx;
+    color: #fff;
+    background: #cdcdcd;
+    padding: 10rpx;
+    text-align: center;
+    margin-right: 30rpx;
+    
+}

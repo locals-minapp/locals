@@ -2,7 +2,9 @@
 var houseData=require('../../data/house-data.js')
 
 Page({
-  data:{},
+  data:{
+    searchMoreShow:false
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     console.log(houseData.houseList);
@@ -21,6 +23,16 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  bindSearchMoreTap: function() {
+    this.setData({
+      searchMoreShow:true
+    })
+  },
+  bindHindSearchMoreTap:function() {
+    this.setData({
+      searchMoreShow:false
+    })
   },
   onScrollLower:function(event){
     console.log("onScrollLower");
