@@ -1,18 +1,17 @@
+var util = require('../../utils/util.js')
 var app = getApp()
 Page({
   data:{
-    cityList:[
-      {"name":"广州"},
-      {"name":"北京"},
-      {"name":"上海"},
-      {"name":"重庆"},
-      {"name":"青岛"}
-    ]
+    
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    console.log(app.globalData.a)
-    console.log(app.globalData.searchKeyword)
+    
+    let url = app.globalData.apiUrl + '/wordBooks?kindCode=02'
+    util.httpGet(url, (res)=>{this.setData({
+      cityList:res
+    })
+    })
   },
   onReady:function(){
     // 页面渲染完成

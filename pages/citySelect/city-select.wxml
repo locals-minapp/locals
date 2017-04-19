@@ -3,13 +3,15 @@
     <input type="text" placeholder="想去哪里？" />
     <text>取消</text>
   </view>
-  <view class="-wrap">
+  <view class="wrap">
     <view class="keyword-wrap"></view>
     <view class="city-wrap">
       <text class="all-city-title">-所有城市-</text>
-      <block wx:for="{{cityList}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="city-list-wrap">
+        <block wx:for="{{cityList}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
         <a class="city" data-name="{{item.name}}" bindtap="bindCitySelectTap">{{item.name}}</a>
       </block>
+      </view>
     </view>
   </view>
 </view>

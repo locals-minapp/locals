@@ -26,12 +26,19 @@
     font-size: 30rpx;
     font-weight: lighter;
 }
+.city-list-wrap {
+    width: 100%;
+    margin: 10rpx 20rpx;
+    text-align: center;
+}
 a.city {
+    display: inline-block;
     font-size: 24rpx;
     color: #fff;
     background: #cdcdcd;
     padding: 10rpx;
     text-align: center;
     margin-right: 30rpx;
+    margin-top: 30rpx;
     
 }
