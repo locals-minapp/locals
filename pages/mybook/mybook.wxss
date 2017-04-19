@@ -1,3 +1,10 @@
+@import "/pages/book-house/book-house-template.wxss";
+.container{
+    /*height:1500rpx;*/
+    padding:0;
+    align-items:stretch;
+}
+
 .flex-tab {
     color: #e0e0e0;
     border-bottom: solid 1px #e0e0e0;
@@ -6,17 +13,9 @@
     color: #e84b60;
     border-bottom: solid 2px #e84b60;
 }
-.container {
-    height:1500rpx;
-}
 .withtab {
     margin-top: 65rpx;
 }
 #ctnt0,#ctnt1 {
-}
-#ctnt0{
-    background: red;
-}
-#ctnt1{
-    background: yellow;
+    width: 100%;
 }

@@ -1,0 +1,15 @@
+<!--pages/mybook/order-detail-info/rule/rule.wxml-->
+<view class="container">
+    <view class="title">房屋守则</view>
+    <view class="content">
+        <text class="cs">1、爱护房间设备设施！</text>
+        <text class="cs">2、退房前(如果使用厨房)需要打扫厨房卫生！</text>
+        <text class="cs">3、禁止黄、赌、毒！</text>
+        <text class="cs">4、禁止携带宠物入住！</text>
+        <text class="cs">5、保存好钥匙和房卡!</text>
+        <text class="cs">6、不接受聚会活动!"</text>
+    </view>
+    <navigator open-type="navigateBack" class="back" hover-class="none">
+        <icon type="cancel" size="30" color="black"/>
+    </navigator>
+</view>

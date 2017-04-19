@@ -1,0 +1,12 @@
+<!--pages/mybook/order-detail-info/unsubscribe/unsubscribe.wxml-->
+<view class="container">
+    <view class="title">退订政策</view>
+    <view class="content">
+        <text class="cs">支付后不能在系统上退款，如需退款请再路客公众号直接联系客服处理。</text>
+        <text class="cs">如果任何一方投诉，必须在房客入住24小时内通知路客，可在路客公众号直接联系客服</text>
+        <text class="cs">如有必要，路客将会进行调解，并对所有争议拥有最终决定权。</text>
+    </view>
+    <navigator open-type="navigateBack" class="back" hover-class="none">
+        <icon type="cancel" size="30" color="black"/>
+    </navigator>
+</view>

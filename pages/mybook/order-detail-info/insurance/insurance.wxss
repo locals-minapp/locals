@@ -1,0 +1,53 @@
+/* pages/mybook/order-detail-info/insurance/insurance.wxss */
+.title{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: #eeeeee;
+    font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size:16px
+}
+
+.pay-detail{
+    padding: 10px 20px 10px 10px;
+}
+
+.left,.right{
+    display: inline-block;
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: inherit;
+    font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.right{
+    float:right;
+}
+
+.instructions{
+    width: 94%;
+    margin: 20px auto;
+}
+
+.ins-text{
+    display: block;
+    margin: 6px auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: #929699;
+}
+
+.back{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    border-top:1px solid #000;
+    padding:10px 0
+}

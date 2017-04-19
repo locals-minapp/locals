@@ -1,0 +1,30 @@
+<!--pages/mybook/order-detail-info/cost/cost.wxml-->
+<view class="container">
+    <view class="title">预计总费用明细</view>
+    <view class="detail">
+        <text>广州</text>
+        <text style="margin-left:10px">1晚住宿</text>
+    </view>
+    <view class="task">
+        <view class="task-info">
+            <text class="left">1晚房费</text>
+            <text class="right">￥100</text>
+        </view>
+        <view class="task-info">
+            <text class="left">清洁费</text>
+            <text class="right">￥0</text>
+        </view>
+        <view class="task-info">
+            <text class="left">预订服务费(5%)</text>
+            <text class="right">￥5</text>
+        </view>
+        <view class="task-info">
+            <text class="left">抵扣一个房晚</text>
+            <text class="right">-￥10</text>
+        </view>
+        <text class="right" style="margin-right:10px">￥95</text>
+    </view>
+    <navigator open-type="navigateBack" class="back" hover-class="none">
+        <icon type="cancel" size="30" color="black"/>
+    </navigator>
+</view>

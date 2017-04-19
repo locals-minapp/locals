@@ -2,12 +2,12 @@
   "pages":[
     
     "pages/index/index",                                    "pages/house/house-list",
-    "pages/house/house-gallery/house-gallery",
-    "pages/datePicker/dateSelect",
-    "pages/citySelect/city-select",
-    "pages/message/message",
-    "pages/mybook/mybook",
-    "pages/info/info",
+    "pages/house/house-gallery/house-gallery",				      "pages/mybook/order-detail-info/order-detail-info",
+    "pages/datePicker/dateSelect",							            "pages/mybook/order-detail-info/insurance/insurance",
+    "pages/citySelect/city-select",							            "pages/mybook/order-detail-info/cost/cost",
+    "pages/message/message",								                "pages/mybook/order-detail-info/rule/rule",
+    "pages/mybook/mybook",								                	"pages/mybook/order-detail-info/guide/guide",
+    "pages/info/info",									                  	"pages/mybook/order-detail-info/unsubscribe/unsubscribe",
     "pages/logs/logs"
   ],
   "window":{

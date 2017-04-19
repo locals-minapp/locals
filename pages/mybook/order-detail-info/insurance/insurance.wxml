@@ -1,0 +1,21 @@
+<!--pages/mybook/order-detail-info/insurance/insurance.wxml-->
+<view class="title" style="background-color:#f8f8f8;border-bottom:1px solid #c8c7cc">保险详情</view>
+<view class="title">支付详情</view>
+<view class="pay-detail" style="border-bottom:1px solid #ccc">
+    <text class="left sum">保险总计</text>
+    <text class="right" style="padding:0px 10px 0 0;color:red">￥5</text>
+    <text class="left" style="display:block;font-size: 12px;color: #929699;">共1人购买1天的住宿旅客意外伤害保险</text>
+</view>
+<view class="pay-detail">
+    <text class="left" style="margin:0">高</text>
+    <text class="right" style="margin:0;padding-right: 10px;color:red">免费赠送</text>
+</view>
+<view class="title">保险说明</view>
+<view class="instructions">
+    <text class="ins-text">Locals路客与众安保险公司合作推出“住宿旅客意外伤害保险”，保障您在住宿期间的人身安全。</text>
+    <text class="ins-text">保险将在入住时生效，保障时长为您在线预订的入住天数。您可以随时在房客后台查看保险状态。如果您有其他保险相关问题，请拨打众安保险全国统一服务热线400-999-9595。</text>
+</view>
+<navigator open-type="navigateBack" class="back" hover-class="none">
+    <icon type="cancel" size="30" color="black"/>
+</navigator>
+

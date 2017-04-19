@@ -176,10 +176,105 @@ var house_gallery={
         houseOwnerName: "Jim",
         comment:0
     }
+};
+var book_list = {
+    checkIn:[
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/22/22_160209182906_885cba597df1456b885abe365d7a2efd.jpg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/202/202_170217155700_00bd0941eecb476dbbbfc0b062116d6d.jpeg',
+            title: 'CBD Bar Street.Zhujiang New Town.GZ',
+            startDate: '2017-04-01',
+            endDate: '2017-06-30',
+            strCity: '广州',
+            customerNum: '1',
+            roomPrice: '100',
+            id: '4651'
+        },
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/49/49_160415181147_619e85a75cb144258db00efef087b93d.jpeg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/22/22_160209155102_0413191f8c4d42cca59ef5f8ad984d03.jpg',
+            title: '不想要么我会好好看看我的',
+            startDate: '2016-12-14',
+            endDate: '2016-12-15',
+            strCity: '广州',
+            customerNum: '1',
+            roomPrice: '10',
+            id: '4658'
+        },
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/22/22_160209182906_885cba597df1456b885abe365d7a2efd.jpg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/202/202_170217155700_00bd0941eecb476dbbbfc0b062116d6d.jpeg',
+            title: 'CBD Bar Street.Zhujiang New Town.GZ',
+            startDate: '2017-04-01',
+            endDate: '2017-06-30',
+            strCity: '广州',
+            customerNum: '1',
+            roomPrice: '100',
+            id: '4652'
+        },
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/2/2_160530150136_2a3ec6ef6317486a814a96f5e8e92612.jpeg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/22/22_160209155102_0413191f8c4d42cca59ef5f8ad984d03.jpg',
+            title: '重庆希尔顿酒店重庆希尔顿酒店重庆希尔顿酒店重庆希尔顿酒店重庆希尔顿酒店重庆希尔顿酒店',
+            startDate: '2017-01-19',
+            endDate: '2017-01-20',
+            strCity: '广州',
+            customerNum: '0',
+            roomPrice: '400',
+            id: '3444'
+        },
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/2/2_160530150136_2a3ec6ef6317486a814a96f5e8e92612.jpeg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/202/202_170217155700_00bd0941eecb476dbbbfc0b062116d6d.jpeg',
+            title: '广州历史保护建筑1号民居，洋洋别墅落，浓浓广州味',
+            startDate: '2017-03-06',
+            endDate: '2017-04-06',
+            strCity: '广州',
+            customerNum: '1',
+            roomPrice: '1000',
+            id: '4747'
+        },
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/2/04.png',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/202/202_170217155700_00bd0941eecb476dbbbfc0b062116d6d.jpeg',
+            title: 'CBD Bar Street.Zhujiang New Town.GZ',
+            startDate: '2017-01-01',
+            endDate: '2017-08-30',
+            strCity: '广州',
+            customerNum: '2',
+            roomPrice: '800',
+            id: '4762'
+        }
+    ],
+    checkOut:[
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/2/2_151225114551_88d2727f5ea04ad98f7196b741394a6c.jpg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/22/22_160209155102_0413191f8c4d42cca59ef5f8ad984d03.jpg',
+            title: '个性前卫摩登时尚丰富七彩的两居室',
+            startDate: '2017-04-04',
+            endDate: '2018-06-30',
+            strCity: '广州',
+            customerNum: '1',
+            roomPrice: '2100',
+            id: '4777'
+        },
+        {
+houseImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/HouseSource/25/25_160215151807_256b44add17446828827fe35feda5c7c.jpeg',
+masterImgUrl:'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/22/22_160209155102_0413191f8c4d42cca59ef5f8ad984d03.jpg',
+            title: '给你家的感觉',
+            startDate: '2016-12-14',
+            endDate: '2016-12-15',
+            strCity: '广州',
+            customerNum: '1',
+            roomPrice: '0',
+            id: '4649'
+        }
+    ]
 }
 module.exports = {
     goodHouseList: good_house_list,
     specialCityList: special_city_list,
     houseList:house_list,
-    houseGallery:house_gallery
+    houseGallery:house_gallery,
+    bookList:book_list
 }

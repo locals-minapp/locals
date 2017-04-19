@@ -1,10 +1,21 @@
+<import src="/pages/book-house/book-house-template.wxml"/>
 <view class="top-tab flex-wrap flex-tab">
   <view class="toptab flex-item {{currentNavtab==0 ? 'active' : ''}}" data-idx="0" bindtap="switchTab">待入住      </view>
   <view class="toptab flex-item {{currentNavtab==1 ? 'active' : ''}}" data-idx="1" bindtap="switchTab">已入住      </view>
 </view>
 <scroll-view scroll-y="true" class="container mybook withtab" bindscrolltoupper="upper" bindscrolltolower="lower" >
-  <view style="background:red;" id="ctnt0" class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}"><text>待入住数据</text></view>
-  <view style="background:yellow;" id="ctnt1" hidden="{{currentNavtab==1 ? '' : true}}"><text>已入住数据</text></view>
+  <view id="ctnt0" class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <!--<text>待入住数据</text>-->
+    <block wx:for="{{checkInList}}" wx:for-item="item" wx:for-index="idx">
+        <template is="checkin" data="{{...item}}"/>
+    </block>
+  </view>
+  <view class="ctn1" id="ctnt1" hidden="{{currentNavtab==1 ? '' : true}}">
+    <!--<text>已入住数据</text>-->
+    <block wx:for="{{checkOutList}}" wx:for-item="item" wx:for-index="idx">
+        <template is="checkout" data="{{...item}}"/>
+    </block>
+  </view>
 </scroll-view>
 
 

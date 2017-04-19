@@ -1,0 +1,116 @@
+<!--pages/mybook/order-detail-info/guide/guide.wxml-->
+<view class="container">
+    <view class="part part1">
+        <view class="part1-left">
+            <text class="part1Ltext">Hi!</text>
+            <text class="part1Ltext">我是高</text>
+            <text class="part1Ltext xiexian"></text>
+            <text class="part1Ltext" style="font-size: 15px;font-weight: normal;">欢迎入住我的家</text>
+        </view>
+        <image class="part1-right" style="background: url({{part1Rimg}});"></image>
+    </view>
+    <view class="part part2">
+        <image class="part2-top" src="{{part2Timg}}"></image>
+        <text class="part2-middle">高  | 室内设计师</text>
+        <text class="part2-bottom">- Locals路客精英房东 -</text>
+    </view>
+    <view class="part part3">
+        <view class="part3-left" style="border-right: 1px solid #cccccc;">
+            <text class="part3-title">助理房东</text>
+            <image src="{{part3Limg}}" class="part3-img"></image>
+            <text  class="part3-name">爵士</text>
+            <view class="part3-num">
+                <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/phone.png" class="part3-phone-img"></image>
+                <text  class="part3-Lphone">12346578910</text>
+            </view>
+            <view  class="part3-num">
+                <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/weixin.png" class="part3-wx-img"></image>
+                <text  class="part3-Lwx">10987654321</text>
+            </view>
+        </view>
+        <view class="part3-right">
+            <text class="part3-title">清洁阿姨</text>
+            <image src="{{part3Limg}}" class="part3-img"></image>
+            <text  class="part3-name">爵士</text>
+           <view class="part3-num">
+                <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/phone.png" class="part3-phone-img"></image>
+                <text  class="part3-Rphone">12346578910</text>
+            </view>
+            <view  class="part3-num">
+                <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/weixin.png" class="part3-wx-img"></image>
+                <text  class="part3-Rwx">10987654321</text>
+            </view>
+        </view>
+    </view>
+    <view class="part part4">
+        <view class="part4-left" style="border-right: 1px solid #cccccc;">
+            <text  class="part4-name">入住</text>
+            <text  class="part4-day" style="margin-bottom:0rpx">下午3点00分</text>
+            <text  class="part4-date" style="margin-top:0rpx">12月14日，周四</text>
+        </view>
+        <view class="part4-right">
+            <text  class="part4-name">退房</text>
+            <text class="part4-day" style="margin-bottom:0rpx">下午3点00分</text>
+            <text class="part4-date" style="margin-top:0rpx">12月15日，周五</text>
+        </view>
+    </view>
+    <view class="part part5">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_1.png" class="part-img part5-img"></image>
+        <text class="part-title part5-title">房源地址</text>
+        <text class="part5-addr">广州市天河区兴盛路10号</text>
+    </view>
+    <view class="part part6">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_2.png" class="part-img part6-img"></image>
+        <text class="part-title part6-title">乘车路线</text>
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/right.png" class="part-dirimg part6-img"></image>
+    </view>
+    <view class="part part7">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_3.png" class="part-img part7-img"></image>
+        <text class="part-title part7-title">停车场推荐</text>
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/right.png" class="part-dirimg part7-img"></image>
+    </view>
+    <view class="part part8">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_4.png" class="part-img part8-img"></image>
+        <text class="part-title part8-title">开门方式</text>
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/right.png" class="part-dirimg part8-img"></image>
+    </view>
+    <view class="part part9">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_5.png" class="part-img part9-img"></image>
+        <text class="part-title part9-title">房屋守则</text>
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/right.png" class="part-dirimg part9-img"></image>
+    </view>
+    <view class="part part10">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_6.png" class="part-img part10-img"></image>
+        <text class="part-title part10-title">LOCALS路客</text>
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/right.png" class="part-dirimg part10-img"></image>
+        <text class="part10-text">当下“最受消费者欢迎”的精品民宿预定平台，</text>
+        <text class="part10-text">也是分享经济领域最有前景的创业公司之一！</text>
+        <text class="part10-text">「精英房东」 「高品质的家」「 像当地人一样旅行」</text>
+    </view>
+    <view class="part part11">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_7.png" class="part-img part11-img" style="width:40rpx"></image>
+        <text class="part-title part11-title">入住后寻找二维码相框，扫码连WIFI</text>
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_wifi.png" class="part11-mainimg"></image>
+    </view>
+    <view class="part part12">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_10.png" class="part-img part12-img"></image>
+        <text class="part-title part12-title">史上最给力的红包~</text>
+        <text class="part12-text">房东送您300元现金券，下次预定可使用；</text>
+        <text class="part12-text">入住后常晒朋友圈，现金红包雨天天下！</text>
+        <text class="part12-text" style="color: black;font-size:15px;margin:40rpx 0 25rpx 50rpx">最快领红包的方法！</text>
+        <text class="part12-text" style="color: #999999;">安卓用户：选中下图，分享图片至微信，识别二维码领券。</text>
+        <text class="part12-text" style="color: #999999;">苹果用户：截屏，分享图片至微信，识别二维码领券。</text>
+    </view>
+    <view class="part13">
+        <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_12.jpg" class="part13-img"></image>
+        <text class="part13-text">[领红包专属二维码]</text>
+    </view>
+    <view class="part part14" style="margin-top:90rpx">
+        <text class="part14-text">希望您入住愉快</text>
+        <text class="part14-text">如果还有特殊需要，请提前联系助理房东！</text>
+        <text class="part14-text">Travel like a local,we are locals!</text>
+    </view>
+    <navigator open-type="navigateBack" class="back" hover-class="none">
+        <icon type="cancel" size="30" color="black"/>
+    </navigator>
+</view>

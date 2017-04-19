@@ -1,0 +1,29 @@
+<template name="checkin">
+  <view class="book-house-content" data-id="{{id}}" catchtap="goToOrderInfo">
+    <view class="house-img" style=" background-image: url('{{houseImgUrl}}');"></view>
+    <view class="master-img" style=" background-image: url('{{masterImgUrl}}');"></view>
+    <view class="divContent">
+      <view class="title">
+        <text>{{title}}</text>
+      </view>
+      <view class="detail">
+        <text>{{strCity}}</text>--<text>{{startDate}}</text>至<text>{{endDate}}</text>--<text>{{customerNum}}</text>位客户  ¥<text>{{roomPrice}}</text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="checkout">
+  <view class="book-house-content" data-id="{{id}}" catchtap="goToOrderInfo">
+    <view class="house-img" style=" background-image: url('{{houseImgUrl}}');"></view>
+    <view class="master-img" style=" background-image: url('{{masterImgUrl}}');"></view>
+    <view class="divContent">
+      <view class="title">
+        <text>{{title}}</text>
+      </view>
+      <view class="detail">
+        <text>{{strCity}}</text>--<text>{{startDate}}</text>至<text>{{endDate}}</text>--<text>{{customerNum}}</text>位客户  ¥<text>{{roomPrice}}</text>
+      </view>
+    </view>
+  </view>
+</template>

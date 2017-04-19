@@ -1,0 +1,44 @@
+/* pages/mybook/order-detail-info/unsubscribe/unsubscribe.wxss */
+.container{
+    padding:0 10px 20%;
+    justify-content:stretch;
+    background: #eeeeee;
+    width: 100%;
+    height: 100%;
+    align-items:stretch;
+}
+
+.title{
+    text-align: center;
+    margin: 20px 20px;
+    font-size: 16px;
+    font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.content{
+    height: 99%;
+    background-color: #fff;
+    padding: 10px 2% 68%;
+    width: 96%
+}
+
+.cs{
+    display: block;
+    background-color: white;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom:10%;
+}
+
+.back{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    border-top:1px solid #000;
+    padding:10px 0;
+    background-color: #fff;
+}

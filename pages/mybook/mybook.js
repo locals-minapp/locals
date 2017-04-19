@@ -1,12 +1,26 @@
 // pages/mybook/mybook.js
+var houseData=require('../../data/house-data.js');
+var app = getApp()
 Page({
   data:{
     currentNavtab: "0",
     toView: 'ctnt0',
     scrollTop: 200
   },
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  onLoad: function () {
+    var that = this;
+    console.log(houseData);
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function(userInfo){
+      //更新数据
+      that.setData({
+        userInfo:userInfo
+      })
+    })
+    this.setData({
+      checkInList:houseData.bookList.checkIn,
+      checkOutList:houseData.bookList.checkOut
+    })
   },
   onReady:function(){
     // 页面渲染完成
@@ -28,5 +42,10 @@ Page({
     })
     console.log(this.data.toView)
   },
-  
+  goToOrderInfo:function(e){
+    var id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url:"order-detail-info/order-detail-info?houseId="+id
+    })
+  }
 })
