@@ -96,6 +96,7 @@ App({
         //complete
       }
     })
+	
   },
   globalData:{
     userInfo:null,
