@@ -58,12 +58,12 @@ App({
       }
     })
   },
-  getGeocoding:function(obj,cb){//地理编码
+  getGeocoding:function({city="",address=""},cb=""){//地理编码
     var that = this;
     var key = config.Config.webServerKey;
-    var city = obj.city || "";
-    var address = obj.address || "";
-    var cb = cb || "";
+    // var city = obj.city || "";
+    // var address = obj.address || "";
+    // var cb = cb || "";
     
     // console.log(this.globalData.batch);
     // console.log(key)
