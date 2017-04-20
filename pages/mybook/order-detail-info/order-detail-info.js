@@ -3,6 +3,7 @@ var config = require('../../../libs/config.js');
 var app = getApp();
 Page({
   data:{
+    houseimg: 'http://locallocalhost.tunnel.2bdata.com/UploadFiles/UserPic/202/202_170217155700_00bd0941eecb476dbbbfc0b062116d6d.jpeg',
     status: '待入住',
     taskid: 'ABC12345',
     htitle: 'CBD Bar Street.Zhujiang New Town.GZ',
@@ -18,8 +19,8 @@ Page({
     latitude: '',
     longitude: '',
     textData: {},
-    address: '',
-    city: '',
+    address: '车陂路龙口大街悦盛苑',
+    city: '广州市',
   },
   getPhone:function(e){
     var phone = this.data.orderPhone;
@@ -104,7 +105,7 @@ Page({
       id:id
     })
     
-    app.getGeocoding({'address':'柑园南路2巷15号','city':'肇庆市'},this.showMap);
+    app.getGeocoding({'address':this.data.address,'city':this.data.city},this.showMap);
 
   },
 })

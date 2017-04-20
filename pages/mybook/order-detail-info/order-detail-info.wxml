@@ -1,35 +1,44 @@
+<image src="{{houseimg}}" class="houseimg"></image>
 <view class="container">
-  <view class="top-tab">
+  <!--<view class="top-tab">
     <text class="top-tab-content">{{status}}</text>
     <text class="top-tab-content">{{taskid}}</text>
-  </view>
-  <view class="bottom-tab">
-    <text class="bottom-tab-content">异议处理</text>
-  </view>
+  </view>-->
   <view class="info house-info">
     <text class="hi-title htitle">{{htitle}}</text>
-    <text class="hi-title stitle">{{stitle}}</text>
+    <text class="hi-title stitle">{{status}}·订单{{taskid}}·{{customerNum}}位客人·{{day}}天</text>
+    <view style="display:inline-block;float:right">
+      <text class="hi-title stitle">聊天</text>
+      <image class="hi-img" src="http://locallocalhost.tunnel.2bdata.com/Content/images/ico_char.png"></image>
+      <text class="hi-title stitle">电话</text>
+      <image  class="hi-img" src="http://locallocalhost.tunnel.2bdata.com/Content/images/ico_phone.png"></image>
+    </view>
   </view>
-  <view class="info date-info">
-    <view class="di-time di-time-bt">
-      <text class="di-title di-title-in">入住</text>
-      <text class="di-title di-date">周四，12月14日，2016</text>
-    </view>
-    <view class="di-time di-time-et" style="border-left:2px solid #CCCCCC">
-      <text class="di-title di-title-out">离开</text>
-      <text class="di-title di-date">周五，12月15日，2016</text>
-    </view>
+  <view class="info detail-info"
+  style="border-top: 1px solid #eee;">
+      <text class="dli-title">入住</text>
+      <view class="dli-contentR">
+        <text class="dli-content ">下午03点00分</text>
+        <text class="dli-content " style="font-size:12px">12月14日，周三</text>
+      </view>
   </view>
   <view class="info detail-info">
+      <text class="dli-title">退房</text>
+      <view class="dli-contentR">
+        <text class="dli-content ">中午12点00分</text>
+        <text class="dli-content " style="font-size:12px">12月15日，周四</text>
+      </view>
+  </view>
+  <!--<view class="info detail-info">
     <text class="dli-title">详情</text>
     <text class="dli-content">{{day}}晚，{{customerNum}}位房客</text>
-  </view>
+  </view>-->
   <view class="info detail-info">
     <text class="dli-title">保险  </text>
     <view class="dli-title-detail" data-type="1" catchtap="question">
     </view>
-    <text class="dli-title" style="font-size:12px;margin-left:5px">{{insurance}}人已免费赠送住宿旅客意外伤害保险</text>
     <text class="dli-content">￥0</text>
+    <text class="dli-title" style="font-size:12px;color:#999;display:block">{{insurance}}人已免费赠送住宿旅客意外伤害保险</text>
   </view>
   <view class="info detail-info">
     <text class="dli-title">预订总费用  </text>
@@ -49,32 +58,46 @@
   </view>
   <view class="info detail-info">
     <text class="dli-title">退订政策</text>
-    <text class="dli-content" style="color:red" bindtap="tounsubecribe">严格</text>
+    <!--<text class="dli-content" style="color:red" bindtap="tounsubecribe">严格</text>-->
+    <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/ico_more.png" style="height:40rpx;width:20rpx" class="dli-content" bindtap="tounsubecribe"></image>
   </view>
   <view class="info detail-info">
     <text class="dli-title">房屋守则</text>
-    <text class="dli-content" style="color:red" bindtap="torule">查看</text>
+    <!--<text class="dli-content" style="color:red" bindtap="torule">查看</text>-->
+    <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/ico_more.png" style="height:40rpx;width:20rpx" class="dli-content" bindtap="tounsubecribe"></image>
   </view>
   <view class="info detail-info">
     <text class="dli-title">入住指引</text>
-    <text class="dli-content" style="color:red" bindtap="toguide">查看</text>
+    <!--<text class="dli-content" style="color:red" bindtap="toguide">查看</text>-->
+    <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/ico_more.png" style="height:40rpx;width:20rpx" class="dli-content" bindtap="tounsubecribe"></image>
   </view>
-  <view class="info detail-info">
+  <view class="cooker">
+    <text class="cook-text">最正宗的当地特色菜，最地道的当地人生活</text>
+    <text class="cook-btn">点击预约大厨</text>
+  </view>
+  <!--<view class="info detail-info">
     <view style="display:inline-block">
       <text class="dli-title" style="color:black">预订人手机： </text>
       <text class="dli-title" style="color:blue" bindtap="getPhone">{{orderPhone}} </text>
     </view>
     <text class="dli-content" style="color:red" bindtap="getPhone">phone</text>
-  </view>
-  <view class="info task-info" style="padding:10px">
+  </view>-->
+  <!--<view class="info task-info" style="padding:10px">
     <text class="ti-title" style="font-size:15px">预定人：{{customer}}</text>
     <text class="ti-title" style="font-size:12px">加入日期：{{Insdate}}</text>
+  </view>-->
+  <view class="info detail-info">
+    <text class="dli-title">地址</text>
+    <text class="dli-title" style="font-size:12px;color:#999;display:block" >{{city}}{{address}}</text>
   </view>
   <view class="map_container">
     <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}"></map>  
   </view>
-  <view class="map_text">
+  <!--<view class="map_text">
       <text class="h1">{{textData.name}}</text>
       <text>{{textData.desc}}</text>
-  </view>
+  </view>-->
+</view>
+<view class="bottom-tab">
+  <text class="bottom-tab-content">异议处理</text>
 </view>
