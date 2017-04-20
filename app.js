@@ -69,7 +69,7 @@ App({
     // console.log(key)
     // console.log(city)
     // console.log(address)
-    console.log(cb)
+    // console.log(cb)
     wx.request({
       url: 'http://restapi.amap.com/v3/geocode/geo?', 
       data: {
@@ -83,8 +83,7 @@ App({
           'content-type': 'application/json;charset=UTF-8'
       },
       success: function(res) {
-        if(res.data.geocodes[0] != undefined){
-            console.log("location="+res.data.geocodes[0].location)
+        if(typeof res.data.geocodes[0] == "object"){
            // return res.data.geocodes[0].location;//返回经纬度
            typeof cb == "function" && cb(res.data.geocodes[0].location)
         }
