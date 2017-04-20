@@ -58,6 +58,9 @@
         <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_1.png" class="part-img part5-img"></image>
         <text class="part-title part5-title">房源地址</text>
         <text class="part5-addr">广州市天河区兴盛路10号</text>
+         <view class="map_container">
+            <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}"></map>  
+         </view>
     </view>
     <view class="part part6">
         <image src="http://locallocalhost.tunnel.2bdata.com/Content/images/hb_2.png" class="part-img part6-img"></image>

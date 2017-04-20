@@ -1,8 +1,8 @@
 {
   "pages":[
-    
+    "pages/mybook/order-detail-info/order-detail-info",
     "pages/index/index",                                    "pages/house/house-list",
-    "pages/house/house-gallery/house-gallery",				      "pages/mybook/order-detail-info/order-detail-info",
+    "pages/house/house-gallery/house-gallery",				      
     "pages/datePicker/dateSelect",							            "pages/mybook/order-detail-info/insurance/insurance",
     "pages/citySelect/city-select",							            "pages/mybook/order-detail-info/cost/cost",
     "pages/message/message",								                "pages/mybook/order-detail-info/rule/rule",

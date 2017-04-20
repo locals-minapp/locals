@@ -1,4 +1,6 @@
-
+var amapFile = require('../../../libs/amap-wx.js');
+var config = require('../../../libs/config.js');
+var app = getApp();
 Page({
   data:{
     status: '待入住',
@@ -11,7 +13,13 @@ Page({
     orderPhone: '12345678910',//预定人手机
     customer: 'me',//预定人
     Insdate: "4月15日",//加入日期,
-    id:0
+    id:0,//临时id
+    markers: [],
+    latitude: '',
+    longitude: '',
+    textData: {},
+    address: '',
+    city: '',
   },
   getPhone:function(e){
     var phone = this.data.orderPhone;
@@ -48,11 +56,55 @@ Page({
       url:"guide/guide"
     })
   },
+  showMap:function(local){
+    var location = local || "";
+    var that = this;
+    var key = config.Config.key;
+
+    var myAmapFun = new amapFile.AMapWX({key: key});
+    myAmapFun.getRegeo({
+      iconPath: "../../../image/map/marker.png",
+      iconWidth: 22,
+      iconHeight: 32,
+      location:location,//经纬度坐标,为空时，基于当前位置进行地址解析,eg:'经度,纬度'
+      success: function(data){
+        var marker = [{
+          id: data[0].id,
+          latitude: data[0].latitude,
+          longitude: data[0].longitude,
+          iconPath: data[0].iconPath,
+          width: data[0].width,
+          height: data[0].height
+        }]
+        that.setData({
+          markers: marker
+        });
+        that.setData({
+          latitude: data[0].latitude
+        });
+        that.setData({
+          longitude: data[0].longitude
+        });
+        that.setData({
+          textData: {
+            name: data[0].name,
+            desc: data[0].desc
+          }
+        })
+      },
+      fail: function(info){
+        // wx.showModal({title:info.errMsg})
+      }
+    })
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     var id = options.houseId;
     this.setData({
       id:id
     })
+    
+    app.getGeocoding({'address':'柑园南路2巷15号','city':'肇庆市'},this.showMap);
+
   },
 })

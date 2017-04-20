@@ -1,4 +1,5 @@
 //app.js
+var config = require('libs/config.js');
 App({
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -57,6 +58,45 @@ App({
       }
     })
   },
+  getGeocoding:function(obj,cb){//地理编码
+    var that = this;
+    var key = config.Config.webServerKey;
+    var city = obj.city || "";
+    var address = obj.address || "";
+    var cb = cb || "";
+    
+    // console.log(this.globalData.batch);
+    // console.log(key)
+    // console.log(city)
+    // console.log(address)
+    console.log(cb)
+    wx.request({
+      url: 'http://restapi.amap.com/v3/geocode/geo?', 
+      data: {
+        batch: that.globalData.batch ,
+        address: address,
+        city: city,
+        key: key
+      },
+      method:'GET',
+      header: {
+          'content-type': 'application/json;charset=UTF-8'
+      },
+      success: function(res) {
+        if(res.data.geocodes[0] != undefined){
+            console.log("location="+res.data.geocodes[0].location)
+           // return res.data.geocodes[0].location;//返回经纬度
+           typeof cb == "function" && cb(res.data.geocodes[0].location)
+        }
+      },
+      fail:function(){
+        return "fail";
+      },
+      complete:function(){
+        //complete
+      }
+    })
+  },
   globalData:{
     userInfo:null,
     searchKeyword:'',
@@ -64,6 +104,7 @@ App({
     searchEndDate:'',
     searchPeopleCount:1,
     apiUrl:'http://localhost:8080/locals/api',
-    authenticationToken:''
+    authenticationToken:'',
+    batch:true,//默认批量查询
   }
 })
