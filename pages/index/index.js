@@ -83,5 +83,12 @@ Page({
     wx.navigateTo({
       url:"../house/house-gallery/house-gallery?houseId="+houseId
     })
+  },
+  catchCityTap:function(event){
+    var dataset = event.currentTarget.dataset;
+    wx.navigateTo({
+      url: '../house/house-list?city=' + dataset.cityName
+     
+    })
   }
 })

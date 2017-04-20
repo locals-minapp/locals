@@ -1,40 +1,40 @@
 <template name="houseList">
   <view class="house-list-content">
-    <image class="house-img" src="{{houseImg}}"></image>
+    <image class="house-img" src="{{houseSourceImgPath}}"></image>
     <view class="price">
-        <text>￥{{price}}</text>
+        <text>￥{{standardPrice}}</text>
     </view>
     <view class="house-content">
       <view class="house-info-content">
         
-        <text class="house-describe">{{houseDescribe}}</text>
+        <text class="house-describe">{{title}}</text>
         <view>
-          <text class="house-specification">{{houseSpecification}}</text>
-          <text class="house-city">{{houseCity}}</text>
+          <text class="house-specification">{{houseType}}</text>
+          <text class="house-city">{{city}}</text>
         </view>
         
         <view class="guest">
           <image class="guest-img" src="/image/people.png"></image>
-          <text class="guest-text">{{guest}}位房客</text>
+          <text class="guest-text">{{tenantNumber}}位房客</text>
         </view>
         <view class="bedroom">
           <image class="bedroom-img" src="/image/room.png"></image>
-          <text class="bedroom-text">{{bedroom}}间卧室</text>
+          <text class="bedroom-text">{{roomNumber}}间卧室</text>
         </view>
         <view class="bed">
           <image class="bed-img" src="/image/bed.png"></image>
-          <text class="guest-text">{{bed}}张床</text>
+          <text class="guest-text">{{bedNumber}}张床</text>
         </view>
         <view class="bathroom">
           <image class="bathroom-img" src="/image/bathroom.png"></image>
-          <text class="bathroom-text">{{bathroom}}卫</text>
+          <text class="bathroom-text">{{toiletNumber}}卫</text>
         </view>
       </view>
 
       <view class="house-owner-content">
-        <image class="house-owner-img" src="{{houseOwnerImg}}"></image>
-        <text class="house-owner-name">{{houseOwnerName}}</text>
-        <text class="house-owner-title">{{houseOwnerTitle}}</text>
+        <image class="house-owner-img" src="{{memberImgPath}}"></image>
+        <text class="house-owner-name">{{memberName}}</text>
+        <text class="house-owner-title">{{memberLabelMark}}</text>
       </view>
     </view>
   </view>

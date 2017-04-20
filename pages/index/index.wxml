@@ -78,7 +78,7 @@
     </view>
     <view class="part7">
       <block wx:for="{{specialCityList}}" wx:for-item="item" wx:for-index="idx">
-        <view catchtap="onGoToTargetTap" data-house-id="{{item.city}}">
+        <view catchtap="catchCityTap" data-city-name="{{item.city}}">
           <template is="specialCity" data="{{...item}}" />
         </view>
       </block>

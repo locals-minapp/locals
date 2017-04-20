@@ -1,4 +1,4 @@
-// pages/house/houseList.js
+var util = require('../../utils/util.js')
 var houseData=require('../../data/house-data.js')
 var app = getApp()
 Page({
@@ -11,10 +11,19 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    console.log(houseData.houseList);
-    this.setData({
-      houseList:houseData.houseList
+    var page = 0
+    let city = options.city
+    console.log(city)
+    let url = app.globalData.apiUrl + '/getHouseSourceInfoByCity?page=' + page + '&size=5'  +'&cityName=' + city + '&startDate=' + app.globalData.searchStartDate + '&endDate=' + app.globalData.searchEndDate + '&peopleCount=' + app.globalData.searchPeopleCount
+    util.httpGet(url, (res)=>{
+      console.log(res)
+      this.setData({
+        houseList:res.content
+      })
     })
+    // this.setData({
+    //   houseList:houseData.houseList
+    // })
   },
   onReady:function(){
     // 页面渲染完成
