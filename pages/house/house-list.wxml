@@ -27,9 +27,5 @@
   </view>
 </view>
 <scroll-view class="house-list-container" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
-  <block wx:for="{{houseList}}" wx:for-item="house">
-    <view class="single-view-container">
-      <template is="houseList" data="{{...house}}" />
-    </view>
-  </block>
+    <template is="houseList" data="{{readyData}}" />
 </scroll-view>

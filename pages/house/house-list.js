@@ -8,18 +8,22 @@ Page({
     searchStartDate:'',
     searchEndDate:'',
     searchPeopleCount:app.globalData.searchPeopleCount,
+    serviceUrl:app.globalData.serviceUrl,
+    aaa:'jlsdjflsjf'
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     var page = 0
     let city = options.city
-    console.log(city)
+    console.log(this.data.serviceUrl)
     let url = app.globalData.apiUrl + '/getHouseSourceInfoByCity?page=' + page + '&size=5'  +'&cityName=' + city + '&startDate=' + app.globalData.searchStartDate + '&endDate=' + app.globalData.searchEndDate + '&peopleCount=' + app.globalData.searchPeopleCount
     util.httpGet(url, (res)=>{
       console.log(res)
-      this.setData({
-        houseList:res.content
-      })
+      var readyData  = {
+        serviceUrl: this.data.serviceUrl,
+        houseList: res.content
+      }
+      this.setData({readyData})
     })
     // this.setData({
     //   houseList:houseData.houseList

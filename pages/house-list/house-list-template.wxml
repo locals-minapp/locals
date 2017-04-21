@@ -1,41 +1,44 @@
 <template name="houseList">
-  <view class="house-list-content">
-    <image class="house-img" src="{{houseSourceImgPath}}"></image>
-    <view class="price">
-        <text>￥{{standardPrice}}</text>
-    </view>
-    <view class="house-content">
-      <view class="house-info-content">
-        
-        <text class="house-describe">{{title}}</text>
-        <view>
-          <text class="house-specification">{{houseType}}</text>
-          <text class="house-city">{{city}}</text>
+  <block wx:for="{{readyData.houseList}}" wx:for-item="house">
+    <view class="single-view-container">
+      <view class="house-list-content">
+        <image class="house-img" src="{{readyData.serviceUrl+house.houseSourceImgPath}}"></image>
+        <view class="price">
+          <text>￥{{house.standardPrice}}</text>
+          <text class="designedby-text"> | Designed By</text>
+          <image class="designedby-img" src="{{readyData.serviceUrl+house.designName}}"></image>
         </view>
-        
-        <view class="guest">
-          <image class="guest-img" src="/image/people.png"></image>
-          <text class="guest-text">{{tenantNumber}}位房客</text>
-        </view>
-        <view class="bedroom">
-          <image class="bedroom-img" src="/image/room.png"></image>
-          <text class="bedroom-text">{{roomNumber}}间卧室</text>
-        </view>
-        <view class="bed">
-          <image class="bed-img" src="/image/bed.png"></image>
-          <text class="guest-text">{{bedNumber}}张床</text>
-        </view>
-        <view class="bathroom">
-          <image class="bathroom-img" src="/image/bathroom.png"></image>
-          <text class="bathroom-text">{{toiletNumber}}卫</text>
+        <view class="house-content">
+          <view class="house-info-content">
+            <text class="house-describe">{{house.title}}</text>
+            <view>
+              <text class="house-specification">{{house.houseType}}·</text>
+              <text class="house-city">{{house.city}}</text>
+            </view>
+            <view class="guest">
+              <image class="guest-img" src="/image/people.png"></image>
+              <text class="guest-text">{{house.tenantNumber}}位房客</text>
+            </view>
+            <view class="bedroom">
+              <image class="bedroom-img" src="/image/room.png"></image>
+              <text class="bedroom-text">{{house.roomNumber}}间卧室</text>
+            </view>
+            <view class="bed">
+              <image class="bed-img" src="/image/bed.png"></image>
+              <text class="guest-text">{{house.bedNumber}}张床</text>
+            </view>
+            <view class="bathroom">
+              <image class="bathroom-img" src="/image/bathroom.png"></image>
+              <text class="bathroom-text">{{house.toiletNumber}}卫</text>
+            </view>
+          </view>
+          <view class="house-owner-content">
+            <image class="house-owner-img" src="{{readyData.serviceUrl+house.memberImgPath}}"></image>
+            <text class="house-owner-name">{{house.memberName}}</text>
+            <text class="house-owner-title">{{house.memberLabelMark}}</text>
+          </view>
         </view>
       </view>
-
-      <view class="house-owner-content">
-        <image class="house-owner-img" src="{{memberImgPath}}"></image>
-        <text class="house-owner-name">{{memberName}}</text>
-        <text class="house-owner-title">{{memberLabelMark}}</text>
-      </view>
     </view>
-  </view>
+  </block>
 </template>

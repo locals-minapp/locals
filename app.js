@@ -64,6 +64,7 @@ App({
     searchEndDate:'',
     searchPeopleCount:1,
     apiUrl:'http://localhost:8080/locals/api',
+    serviceUrl:'http://locallocalhost.tunnel.2bdata.com',
     authenticationToken:''
   }
 })
